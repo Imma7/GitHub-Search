@@ -38,10 +38,11 @@
               <div class="panel-Heading">
                 <h3 class="panel-title">Repos</h3>
               </div>
-              <div class="panel-body" *ngFor="let repo of repos">
+              <div class="panel-body" *ngFor="let repo of Repos">
                 <p>
-
+                  {{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-primary pull-right">View Project on GitHub</a>
                 </p>
+                <p>{{repo.description}}</p>
               </div>
             </div>
           </div>
