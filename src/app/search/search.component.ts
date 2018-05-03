@@ -8,7 +8,7 @@ import { ProfileService } from '../services/profile.service';
 })
 export class SearchComponent implements OnInit {
 
-  constructor() { }
+  constructor(private profileService: ProfileService) { }
 
   ngOnInit() {
   }
