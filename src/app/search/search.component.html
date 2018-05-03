@@ -1,3 +1,10 @@
+<!-- <div class="container-fluid"> -->
+  <div class="navbar">
+    <p>GitHub Search</p>
+    <img src="assets/images/inspectocat.jpg" alt="Image Header">
+  </div>
+<!-- </div> -->
+
 <form action="" class="form-search">
   <div class="form-group">
   <input type="text" class="form-control" placeholder="Username:" [(ngModel)]="username" name="username" (keyup)="findProfile()">
@@ -6,9 +13,9 @@
 
 <div *ngIf="profile">
   <div class="panel panel-default">
-    <div class="panel-Heading">
-      {{profile.name}} <small>({{profile.login}})</small>
-      , <span *ngIf="profile.location">Stays at {{profile.location}}</span>
+    <div class="container-fluid">
+      <!-- {{profile.name}} <small>({{profile.login}})</small>
+      , <span *ngIf="profile.location">{{profile.location}}</span> -->
     </div>
 
     <div class="panel-body">
@@ -16,8 +23,12 @@
         <div class="col-md-3">
           <img src="{{profile.avatar_url}}" class="img-circle img-responsive"alt="Profile Picture">
         </div>
+
+        <hr>
+
         <div class="col-sm-5">
           <ul class="list-group">
+            <li class="list-group-item" *ngIf="profile.name"><h4><strong>{{profile.name}}</strong></h4></li>
             <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
             <li class="list-group-item" *ngIf="profile.url" target="_blank">Profile: <a href="{{profile.html_url}}">{{profile.html_url}}</a></li>
             <li class="list-group-item" *ngIf="profile.email">Email: <a href="{{profile.email}}">{{profile.email}}</a></li>
