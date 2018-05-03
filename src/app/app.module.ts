@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { ProfileService } from '.services/profile.service';
 
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
@@ -14,7 +15,7 @@ import { SearchComponent } from './search/search.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
